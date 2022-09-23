@@ -1,4 +1,4 @@
-# tetragon-lab
+# Tetragon Lab
 
 ## Build a one-node Kubernetes Cluster
 
@@ -81,4 +81,7 @@ rm tetragon-linux-amd64.tar.gz{,.sha256sum}
 To start printing events run:
 ```
 kubectl logs -n kube-system ds/tetragon -c export-stdout -f | tetragon observe
+```
+```
+kubectl logs -n kube-system ds/tetragon -c export-stdout -f | tetragon observe --namespace default --pod xwing
 ```
