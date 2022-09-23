@@ -41,11 +41,6 @@ The first way is to observe the raw json output from the stdout container log:
 ```
 kubectl logs -n kube-system ds/tetragon -c export-stdout -f
 ```
-### Raw JSON events
-The first way is to observe the raw json output from the stdout container log:
-```
-kubectl logs -n kube-system ds/tetragon -c export-stdout -f
-```
 
 To print out the logs on all tetragon pods, you will need to use a filter/selector such as ```-l app.kubernetes.io/name=tetragon```:
 ```
@@ -81,4 +76,9 @@ OUTPUT: <b>tetragon</b>
 
 ```
 rm tetragon-linux-amd64.tar.gz{,.sha256sum}
+```
+
+To start printing events run:
+```
+kubectl logs -n kube-system ds/tetragon -c export-stdout -f | tetragon observe
 ```
