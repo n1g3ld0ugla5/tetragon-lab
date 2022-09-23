@@ -7,7 +7,7 @@ dpkg --print-architecture
 OUTPUT: amd64
 
 ```
-curl -L --remote-name-all https://github.com/cilium/tetragon/releases/download/tetragon-cli/tetragon-linux-amd64.tar.gz.sha256sum
+curl -L --remote-name-all https://github.com/cilium/tetragon/releases/download/tetragon-cli/tetragon-linux-amd64.tar.gz{,.sha256sum}
 ```
 
 Valid Packages: <br/>
